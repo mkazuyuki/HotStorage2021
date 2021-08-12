@@ -20,12 +20,14 @@ Day1 セッション構成は 前半 Flash storage > break > 後半 Distributed 
 平行稼働する Basic Paxos の複数の Proposer から リーダー を選出して、リーダーにクライアントと、アクセプターとの通信を任せ、 プロトコルにおける 最初のフェーズで プロポーザーとアクセプターが Prepare, Promise を交換する通信処理を省略する最適化方式。
 端的には Basic Paxosをより軽く、よりスケーラブルにすることを目指して、安定稼働の期待できる プロポーザーをリーダーにして プロトコル の一部を省略したもの。
 
+リーダーに処理が集中することがスループット向上に対するボトルネックとなり、課題視された。
+
 ### EPaxos (Egalitarian Paxos)
 
 クライアントリクエストに順序付けを行うこと(オーダリング) によって一貫性を保証。(**Operation based CRDT**)  
 プロポーザーとアクセプターとを同居させることで Multi Paxos をリーダーレスにする最適化。
 
-CRDT ([1](https://qiita.com/everpeace/items/bb73ec64d3e682279d26),[2](https://www.slideshare.net/ShingoOmura/crdt-in-15-minutes-59247995)) のアイディアが反映されている。
+CRDT [[1](https://qiita.com/everpeace/items/bb73ec64d3e682279d26)][[2](https://www.slideshare.net/ShingoOmura/crdt-in-15-minutes-59247995)] のアイディアが反映されている。
 
 CRDT(2011) → EPaxos(2013) → SDPaxos(2018)
 
@@ -38,6 +40,8 @@ CRDTはレプリカへの操作を 可換 (commutative) なものに限定して
 
 ### PigPaxos
 
-ラインダムなフォロワーに リーダーとの通信の 中継役 をさせることで (ピギーバックによる通信集約で) 通信コストをリーダーから(中継役の)フォロワーに分散させる方式。
+ランダムなフォロワーに リーダーとの通信の 中継役 をさせることで (ピギーバックによる通信集約で) 通信コストをリーダーから(中継役の)フォロワーに分散させる方式。
 
+<!--
 ![image](https://user-images.githubusercontent.com/11642047/129136665-6084bbdb-86ed-4fed-bc16-006725137930.png)
+-->
