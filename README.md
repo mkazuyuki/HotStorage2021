@@ -24,11 +24,12 @@ Day1 セッション構成は 前半 Flash storage > break > 後半 Distributed 
 
 クライアントリクエストに順序付けを行うこと(オーダリング) によって一貫性を保証。(**Operation based CRDT**)  
 プロポーザーとアクセプターとを同居させることで Multi Paxos をリーダーレスにする最適化。
-CRDT のアイディアが反映されている。
+
+CRDT ([1](https://qiita.com/everpeace/items/bb73ec64d3e682279d26),[2](https://www.slideshare.net/ShingoOmura/crdt-in-15-minutes-59247995)) のアイディアが反映されている。
 
 CRDT(2011) → EPaxos(2013) → SDPaxos(2018)
 
-CRDTはレプリカへの操作を 可換 (commutative) なものに限定して 最後にマージすると 「全てのレプリカは 操作列が全て到達すれば、収束する」 例: カウンタ  
+CRDTはレプリカへの操作を 可換 (commutative) なものに限定して 最後にマージすると 「全てのレプリカは 操作列が全て到達すれば、収束する」という手法 例: カウンタ  
 ⇒ ステートマシンへのコマンド列を可換なものに限定すると、操作列が全て到達すれば全てのステートマシンレプリカは一意に収束する
 
 ### SDPaxos (Semi-Decentralized Paxos)
