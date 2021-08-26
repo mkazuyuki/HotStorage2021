@@ -25,7 +25,7 @@ Day1 セッション構成は 前半 Flash storage > break > 後半 Distributed 
 ### EPaxos (Egalitarian Paxos)
 
 クライアントリクエストに順序付けを行うこと(オーダリング) によって一貫性を保証。(**Operation based CRDT**)  
-プロポーザーとアクセプターとを同居させることで Multi Paxos をリーダーレスにする最適化。
+プロポーザーとアクセプターとを同居させることで Multi Paxos をリーダーレスにする最適化。[paper](https://www.usenix.org/conference/nsdi21/presentation/tollman)
 
 CRDT [[1](https://qiita.com/everpeace/items/bb73ec64d3e682279d26)][[2](https://www.slideshare.net/ShingoOmura/crdt-in-15-minutes-59247995)] のアイディアが反映されている。
 
@@ -36,7 +36,7 @@ CRDTはレプリカへの操作を 可換 (commutative) なものに限定して
 
 ### SDPaxos (Semi-Decentralized Paxos)
 
-(EPaxosとは逆に) クライアントリクエストに順序付けを行わず、レプリカ(アクセプター)へ各コマンドを複製した後に、レプリカで全てのコマンドに順序を与えて一貫性を保証する。(**State based CRDT**)
+(EPaxosとは逆に) クライアントリクエストに順序付けを行わず、レプリカ(アクセプター)へ各コマンドを複製した後に、レプリカで全てのコマンドに順序を与えて一貫性を保証する。(**State based CRDT**) [paper](https://www.microsoft.com/en-us/research/publication/sdpaxos-building-efficient-semi-decentralized-geo-replicated-state-machines/)
 
 ### PigPaxos
 
