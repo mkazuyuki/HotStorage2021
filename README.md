@@ -1,17 +1,15 @@
 # HotStorage2021
 
-Day1 2021.07.27 GMT 1400-
+Day1 2021.07.27 GMT 1400-  
 Day2 2021.07.28 GMT 1400-
 
-Day1 セッション構成は 前半 Flash storage > break > 後半 Distributed storage
+Day1 セッション構成は Keynote > 前半 Flash storage > break > 後半 Distributed storage
+
+- Keynote [I/O Acceleration from the Bottom Up](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=3450s)
 
 個人的興味は Distributed storage
 
-- Keynote [I/O Acceleration from the Bottom Up](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=3450s)
 - [Scalable but Wasteful: Current State of Replication in the Cloud](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=15265s)
-
-- Reference
-	- EPaxos Revisited ([presentation](https://www.usenix.org/conference/nsdi21/presentation/tollman), [slides](https://www.usenix.org/system/files/nsdi21_slides-tollman.pdf))
 
 ## Paxos extentions
 
