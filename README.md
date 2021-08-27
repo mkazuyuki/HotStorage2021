@@ -5,12 +5,10 @@ Day2 2021.07.28 GMT 1400-
 
 Day1 セッション構成は Keynote > 前半 Flash storage > break > 後半 Distributed storage
 
-- Keynote [I/O Acceleration from the Bottom Up](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=3450s)
-
-個人的興味は Distributed storage
-
-- [Scalable but Wasteful: Current State of Replication in the Cloud](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=15265s)
-
+- I/O Acceleration from the Bottom Up  
+  Presentation [English](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=3450s)
+- Scalable but Wasteful: Current State of Replication in the Cloud  
+  Presentation [English](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=15265s) | [Japanese](https://youtu.be/3ll_xtXkRPE)
 ## Paxos extentions
 
 ### Multi Paxos
