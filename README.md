@@ -8,7 +8,14 @@ Day1 セッション構成は Keynote > 前半 Flash storage > break > 後半 Di
 - I/O Acceleration from the Bottom Up  
   Presentation [English](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=3450s)
 - Scalable but Wasteful: Current State of Replication in the Cloud  
-  Presentation [English](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=15265s) | [Japanese](https://youtu.be/3ll_xtXkRPE)
+  Presentation [English](https://www.youtube.com/watch?v=9C2ESO6YvNk&t=15265s) | [Japanese](https://youtu.be/3ll_xtXkRPE)  
+
+  分散アルゴリズムを実行するとき、クラウドでは 最適化されたアルゴリズムが より高性能となる訳ではない、という話。
+
+  Multi Paxos のボトルネックを解消する最適化を行った EPaxos は Multi Paxos より高いスループットが得られる。
+  しかし、クラウドでの現実的な使用方法を想定して、使用するリソース量(ノード数・CPU数など)を予め決めて、その中にアルゴリズムを実行するインスタンスを複数・同数 詰め込んで性能を測定すると、Multi Paxos が EPaxos より高いスループットを発揮する、という逆転現象が起こる。
+  この論文は 最適化による高性能が 追加的なリソース消費と引き換えに得られている場合、使用できるリソース量を制限すると 最適化しないほうが高性能となる例 を示している。
+
 ## Paxos extentions
 
 ### Multi Paxos
